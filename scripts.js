@@ -5,6 +5,17 @@ const buttonSumAll = document.querySelector('.sum-all')
 const buttonFilter = document.querySelector('.filter-all')
 let myLi = ''
 
+
+// Function para conversão de valores para Real BR
+function formatCurrency(value){
+    const newValue = value.toLocaleString('pt-br', { // OU poderia por o return direto sem criar a variável
+        style: 'currency',
+        currency: 'BRL',
+    })
+    return newValue
+}
+
+
 // Function para mostrar todos os cards
 function showAll(productsArray) {
     myLi = '' // Reinicia a variável myLi para evitar acumulação de cards
@@ -14,7 +25,7 @@ function showAll(productsArray) {
             <li>
             <img src=${product.src}>
                 <p>${product.name}</p>
-                <p class="item-price">R$ ${product.price}</p>
+                <p class="item-price">R$ ${formatCurrency(product.price)}</p>
             </li>
         `
     })
@@ -40,7 +51,7 @@ function sumAll() {
 
     list.innerHTML = `
             <li>
-                <p>O valor total dos itens é R$ ${totalValue}</p>
+                <p>O valor total dos itens é R$ ${formatCurrency(totalValue)}</p>
             </li>
         `
 
