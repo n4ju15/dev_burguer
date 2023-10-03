@@ -2,6 +2,7 @@ const list = document.querySelector('ul')
 const buttonShowAll = document.querySelector('.show-all')
 const buttonMapAll = document.querySelector('.map-all')
 const buttonSumAll = document.querySelector('.sum-all')
+const buttonFilter = document.querySelector('.filter-all')
 let myLi = ''
 
 // Function para mostrar todos os cards
@@ -46,6 +47,15 @@ function sumAll() {
 }
 
 
+// Function para filtrar todos os itens
+function filterAll() {
+    const listVegan = menuOptions.filter( product => product.vegan)
+
+    showAll(listVegan)
+}
+
+
 buttonShowAll.addEventListener('click', () => showAll(menuOptions))
 buttonMapAll.addEventListener('click', mapAllItems)
 buttonSumAll.addEventListener('click', sumAll)
+buttonFilter.addEventListener('click', filterAll)
