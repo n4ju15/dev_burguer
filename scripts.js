@@ -18,7 +18,7 @@ function showAll(productsArray) {
         `
     })
 
-    list.innerHTML = myLi
+    list.innerHTML = myLi // O list É a ul > li
 }
 
 
@@ -35,12 +35,14 @@ function mapAllItems() {
 
 // Function para somar todos os itens
 function sumAll() {
-    const finalPrice = menuOptions.reduce((acc, value) => {
-        return acc + value.price
-    }, 0)
+    const totalValue = menuOptions.reduce((acc, curr) => acc + curr.price, 0)
 
-    const totalValueElement = document.querySelector('li');
-    totalValueElement.textContent = `R$ ${finalPrice.toFixed(2)}`;
+    list.innerHTML = `
+            <li>
+                <p>O valor total dos itens é R$ ${totalValue}</p>
+            </li>
+        `
+
 }
 
 
