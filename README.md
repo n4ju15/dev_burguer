@@ -6,12 +6,12 @@ Este repositório contém o projeto Dev Burguer que é um site 'cardápio' de ha
 
 ## Para Desktop
 <div align="center">
-<img src="./img/readme.png" width="400" height="400" loop>
+<img src="./img/readme.png" width="800" height="500" loop>
 </div>
 
 ## Para Mobile
 <div align="center">
-<img src="./img/mobile.jpeg"  width="200" height="400">
+<img src="./img/mobile.png"  width="200" height="400">
 </div>
 
 ## Tecnologias
