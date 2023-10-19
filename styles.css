@@ -18,6 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -41,6 +42,7 @@ ul {
     grid-template-columns: 200px 200px 200px;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 li {
@@ -61,4 +63,34 @@ p {
 .item-price {
     font-weight: bold;
     color: #79cb15;
+}
+
+@media screen and (max-width: 768px) {
+    .container-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        flex: none;
+        width: 40%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        margin: 0 8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    li {
+        margin: 0 3rem;
+    }
 }
